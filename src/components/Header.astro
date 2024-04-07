@@ -1,0 +1,31 @@
+---
+import Container from '@components/Container.astro';
+import Logo from '@components/ui/Logo.astro';
+import ButtonBorder from '@components/ui/ButtonBorder.astro';
+import ButtonFill from '@components/ui/ButtonFill.astro';
+---
+<header class="py-4 border-b border-zinc-300">
+    <Container className='flex items-center justify-between'>
+        <div class="flex items-center justify-between gap-8">
+           <div class="max-w-44">
+                <a href="/">
+                    <Logo />
+                </a>
+           </div>
+            <nav class="flex gap-8">
+                <a href="/">Início</a>
+                <a href="/">Sobre</a>
+                <a href="/">Documentação</a>
+                <a href="/">Releases</a>
+            </nav>
+        </div>
+        <div class="flex gap-4">
+            <ButtonBorder href="/">
+                Doar
+            </ButtonBorder>
+            <ButtonFill href='/'>
+                Download
+            </ButtonFill>
+        </div>
+    </Container>
+</header>

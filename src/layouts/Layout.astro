@@ -4,6 +4,7 @@ import '@fontsource-variable/onest';
 
 // Supports weights 400-700
 import '@fontsource-variable/arimo';
+import Header from '@components/Header.astro';
 
 interface Props {
 	title: string;
@@ -21,7 +22,8 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-zinc-200 text-zinc-500">
+		<Header />
 		<slot />
 	</body>
 </html>
@@ -44,7 +46,7 @@ const { title } = Astro.props;
 	.text-heading {
 		font-family: 'Onest Variable', sans-serif;
 	}
-	
+
 	code {
 		font-family:
 			Menlo,
