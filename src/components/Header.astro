@@ -4,6 +4,9 @@ import Logo from '@components/ui/Logo.astro';
 import ButtonBorder from '@components/ui/ButtonBorder.astro';
 import ButtonFill from '@components/ui/ButtonFill.astro';
 ---
+<div class="bg-gradient-to-r from-teal-400 to-gray-800 py-3 text-center text-white">
+    Confira a versão mais atualizada do GIMP <strong>2.10.36</strong>
+</div>
 <header class="py-4 border-b border-zinc-300">
     <Container className='flex items-center justify-between'>
         <div class="flex items-center justify-between gap-8">
@@ -13,7 +16,7 @@ import ButtonFill from '@components/ui/ButtonFill.astro';
                 </a>
            </div>
             <nav class="flex gap-8">
-                <a href="/">Início</a>
+                <a class="hover:text-zinc-800 transition-all" href="/">Início</a>
                 <a href="/">Sobre</a>
                 <a href="/">Documentação</a>
                 <a href="/">Releases</a>
