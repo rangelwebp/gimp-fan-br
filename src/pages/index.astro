@@ -1,11 +1,42 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
+import H1 from '@components/ui/H1.astro';
+import ButtonFill from '@components/ui/ButtonFill.astro';
+import Card from '@components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Gimp BR">
 	<Container>
-		<h1 class="text-heading text-5xl">Hello, World!</h1>
+		<div class="w-7/12 mx-auto text-center mt-32">
+			<H1>
+				O software de manipulação de imagem gratuito mais popular.
+			</H1>
+			<p class="py-3 mb-3">Crie, edite e manipule imagens com o GIMP, o software livre multiplataforma que oferece recursos profissionais para todos os níveis de habilidade.
+			</p>
+			<ButtonFill href='/'>
+				Baixe gratuitamente
+			</ButtonFill>
+		</div>
 	</Container>
+	<div class="w-full relative mt-48 bg-zinc-900 bg-bg-blurred bg-no-repeat bg-right">
+		<Container>
+			<img class="mx-auto relative -top-24" src="/laptop-gimp.png" alt="Interface do Gimp">
+			
+			<div class="pt-1 pb-24">
+				<h2 class="text-heading text-[5rem] font-medium leading-none tracking-tight text-zinc-100 max-w-3xl">Ideal para todos os tipos de profissionais</h2>
+			
+				<div class="flex mt-8 gap-8">
+					<Card icone="camera" titulo="Fotógrafos" paragrafo="Edite e aprimore suas fotos com controle total sobre as configurações de imagem." />
+
+					<Card icone="camera" titulo="Designers" paragrafo="Edite e aprimore suas fotos com controle total sobre as configurações de imagem." />
+
+					<Card icone="camera" titulo="Desenvolvedores" paragrafo="Edite e aprimore suas fotos com controle total sobre as configurações de imagem." />
+
+					<Card icone="camera" titulo="Artistas" paragrafo="Edite e aprimore suas fotos com controle total sobre as configurações de imagem." />
+				</div>
+			</div>
+		</Container>
+	</div>
 </Layout>
 

@@ -5,6 +5,7 @@ import '@fontsource-variable/onest';
 // Supports weights 400-700
 import '@fontsource-variable/arimo';
 import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -17,30 +18,27 @@ const { title } = Astro.props;
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Projeto de estudos com o Astro.Build sobre o Gimp em português" />
+		<meta name="description" content="GIMP é um editor de imagens multiplataforma disponível para GNU/Linux, macOS, Windows e mais sistemas operacionais" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
+		<title>{title} - Editor de imagens multiplataforma</title>
 	</head>
 	<body class="bg-zinc-200 text-zinc-500">
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+	
 	html {
+		scroll-behavior: smooth;
+		-webkit-font-smoothing:antialiased;
 		font-family: 'Arimo Variable', sans-serif;
+	}
+
+	body{
+		font-size: 16px;
 	}
 
 	.text-heading {
